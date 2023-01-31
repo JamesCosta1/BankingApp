@@ -1,0 +1,15 @@
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\bin\Debug\net7.0\DOTNETplayground.exe
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\bin\Debug\net7.0\DOTNETplayground.deps.json
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\bin\Debug\net7.0\DOTNETplayground.runtimeconfig.json
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\bin\Debug\net7.0\DOTNETplayground.dll
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\bin\Debug\net7.0\DOTNETplayground.pdb
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\obj\Debug\net7.0\DOTNETplayground.csproj.AssemblyReference.cache
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\obj\Debug\net7.0\DOTNETplayground.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\obj\Debug\net7.0\DOTNETplayground.AssemblyInfoInputs.cache
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\obj\Debug\net7.0\DOTNETplayground.AssemblyInfo.cs
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\obj\Debug\net7.0\DOTNETplayground.csproj.CoreCompileInputs.cache
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\obj\Debug\net7.0\DOTNETplayground.dll
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\obj\Debug\net7.0\refint\DOTNETplayground.dll
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\obj\Debug\net7.0\DOTNETplayground.pdb
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\obj\Debug\net7.0\DOTNETplayground.genruntimeconfig.cache
+C:\Users\jimmy\Desktop\DOTNETplayground\DOTNETplayground\obj\Debug\net7.0\ref\DOTNETplayground.dll
