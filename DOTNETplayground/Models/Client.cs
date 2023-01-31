@@ -80,6 +80,8 @@ namespace Models
 
             Account newAccount = new Account(this.accounts.Count + 1, accountType, initialDeposit);
             this.accounts.Add(newAccount);
+            Console.WriteLine("Success!");
+            newAccount.DisplayBalance();
             return;
         }
 
