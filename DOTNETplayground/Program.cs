@@ -14,8 +14,8 @@ namespace MyFirstNamespace
             do
             {
                 Console.WriteLine("Please select an option below.");
-                Console.WriteLine("1. Log In");
-                Console.WriteLine("2. Create a new Client");
+                Console.WriteLine("1. Log in");
+                Console.WriteLine("2. Create a new profile");
                 Console.WriteLine("0. Exit");
 
                 switch (hFunc.GetUserInt())
