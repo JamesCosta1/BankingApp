@@ -8,15 +8,16 @@ namespace MyFirstNamespace
     {
         public static void Main(string[] args)
         {
+            Console.Clear();
             bool programIsRunning = true;
             Bank wellsFargo = new Bank(1, "Wells Fargo");
-            Console.WriteLine("Welcome to this Wells Fargo console application!");
+            Console.WriteLine("Welcome to this Wells Fargo console application! \n");
             do
             {
-                Console.WriteLine("Please select an option below.");
+                Console.WriteLine("Please select an option below. \n");
                 Console.WriteLine("1. Log in");
                 Console.WriteLine("2. Create a new profile");
-                Console.WriteLine("0. Exit");
+                Console.WriteLine("0. Exit \n");
 
                 switch (hFunc.GetUserInt())
                 {
@@ -43,7 +44,7 @@ namespace MyFirstNamespace
             Client client = bank.ClientLogIn();
             while (client != null)
             {
-                Console.WriteLine("Please select an option below.");
+                Console.WriteLine("Please select an option below. \n");
                 Console.WriteLine("1. List all account balances you have.");
                 Console.WriteLine("2. Create a new account.");
                 Console.WriteLine("3. Access an Existing account.");
@@ -78,7 +79,7 @@ namespace MyFirstNamespace
             Account account = client.AccessAccount();
             while (account != null)
             {
-                Console.WriteLine("Please select an option below.");
+                Console.WriteLine("Please select an option below. \n");
                 Console.WriteLine("1. Display this account's balance.");
                 Console.WriteLine("2. Deposit.");
                 Console.WriteLine("3. Withdrawal.");
@@ -110,7 +111,7 @@ namespace MyFirstNamespace
                     //     break;
 
                     default:
-                        Console.WriteLine("Please select a valid option.");
+                        Console.WriteLine("Please select a valid option. \n");
                         break;
 
 

@@ -7,7 +7,7 @@ namespace UtilTools
             int input;
             if (!int.TryParse(Console.ReadLine(), out input))
             {
-                Console.WriteLine("Please enter a valid input.");
+                Console.WriteLine("Please enter a valid input. \n");
                 return 0;
             }
 
@@ -19,7 +19,7 @@ namespace UtilTools
             double input;
             if (!double.TryParse(Console.ReadLine(), out input))
             {
-                Console.WriteLine("Please enter a valid input.");
+                Console.WriteLine("Please enter a valid input. \n");
                 return 0;
             }
 
@@ -32,7 +32,7 @@ namespace UtilTools
             string input = Console.ReadLine();
             while (String.IsNullOrEmpty(input))
             {
-                Console.WriteLine("Please input some characters.");
+                Console.WriteLine("Please input some characters. \n");
                 input = Console.ReadLine();
             }
             return input;

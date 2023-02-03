@@ -28,7 +28,7 @@ namespace Models
         {
             if (this.accounts.Count == 0)
             {
-                Console.WriteLine("You have no accounts with us.");
+                Console.WriteLine("You have no accounts with us. \n");
                 return;
             }
 
@@ -47,7 +47,7 @@ namespace Models
             {
                 if (accountType == null)
                 {
-                    Console.WriteLine("Please Select an account type: ");
+                    Console.WriteLine("Please Select an account type: \n");
                     Console.WriteLine("1. Savings");
                     Console.WriteLine("2. Checking");
                     Console.WriteLine("0. Go back");
@@ -62,7 +62,7 @@ namespace Models
                             accountType = AccountType.checking;
                             break;
                         default:
-                            Console.WriteLine("Please select an account type.");
+                            Console.WriteLine("Please select a valid option.");
                             break;
                     }
                 }
@@ -87,6 +87,8 @@ namespace Models
 
         // TODO: If the user inputs an accountID the client does not have (while the original version of the conditional is implimented),
         // an ArgumentOutOfRange execption is thrown.
+
+        // The issue cannot be recreated, it seems to have been resolved for now...
         public Account AccessAccount()
         {
             int inputAccountID;
@@ -100,7 +102,7 @@ namespace Models
             {
                 return accountWithAccountID[0];
             }
-            Console.WriteLine($"The account with ID {inputAccountID} does not exist.");
+            Console.WriteLine($"You have no accounts with ID {inputAccountID}. \n");
             return null;
         }
     }

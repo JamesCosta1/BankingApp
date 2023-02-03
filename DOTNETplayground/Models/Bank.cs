@@ -45,10 +45,10 @@ namespace Models
             var clientsWithClientID = this.clients.Where(x => (x.GetClientID().ToString().Equals(inputClientID))).ToList();
             if ((clientsWithClientID.Count > 0) && (clientsWithClientID[0].GetClientPassword() == inputClientPassword))
             {
-                Console.WriteLine($"Hello, {clientsWithClientID[0].GetClientFirstName()}! You logged in successfully!");
+                Console.WriteLine($"Hello, {clientsWithClientID[0].GetClientFirstName()}! You logged in successfully! \n");
                 return clientsWithClientID[0];
             }
-            Console.WriteLine("Incorrect client ID or password.");
+            Console.WriteLine("Incorrect client ID or password. \n");
             return null;
         }
 

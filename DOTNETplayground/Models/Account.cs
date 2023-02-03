@@ -29,7 +29,7 @@ namespace Models
 
 
             this.balance += amountToDeposit;
-            Console.WriteLine($"A deposit of {amountToDeposit} was successful!");
+            Console.WriteLine($"A deposit of {amountToDeposit} was successful! \n");
             DisplayBalance();
         }
 
@@ -40,18 +40,18 @@ namespace Models
 
             if (amountToWithdrawal <= 0)
             {
-                Console.WriteLine("Please enter an amount bigger than $0.");
+                Console.WriteLine("Please enter an amount bigger than $0. \n");
                 return;
             }
 
             if (amountToWithdrawal <= this.balance)
             {
                 this.balance += amountToWithdrawal;
-                Console.WriteLine($"A withdrawal of {amountToWithdrawal} was successful!");
+                Console.WriteLine($"A withdrawal of {amountToWithdrawal} was successful! \n");
                 DisplayBalance();
                 return;
             }
-            Console.WriteLine($"You cannot withdrawal more than your balance of {this.balance}.");
+            Console.WriteLine($"You cannot withdrawal more than your balance of {this.balance}. \n");
         }
 
         public void DisplayBalance() { Console.WriteLine($"Account #{this.accountID} ({this.accountType}) has a balance of ${this.balance}."); }
