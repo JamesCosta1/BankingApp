@@ -29,7 +29,7 @@ namespace UtilTools
         // This method is to check to make sure the user inputs something (rather than them entering nothing)
         public static string GetUserString()
         {
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
             while (String.IsNullOrEmpty(input))
             {
                 Console.WriteLine("Please input some characters. \n");

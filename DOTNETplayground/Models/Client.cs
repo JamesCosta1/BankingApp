@@ -84,11 +84,6 @@ namespace Models
             newAccount.DisplayBalance();
             return;
         }
-
-        // TODO: If the user inputs an accountID the client does not have (while the original version of the conditional is implimented),
-        // an ArgumentOutOfRange execption is thrown.
-
-        // The issue cannot be recreated, it seems to have been resolved for now...
         public Account AccessAccount()
         {
             int inputAccountID;
@@ -96,14 +91,69 @@ namespace Models
             Console.WriteLine("Please enter account ID: ");
             inputAccountID = hFunc.GetUserInt();
 
-            var accountWithAccountID = this.accounts.Where(x => (x.GetAccountID().ToString().Equals(inputAccountID))).ToList();
-            // if (accountWithAccountID[0] != null) I want to impliment this version of the conditional for more professional code.
-            if (accountWithAccountID.Count() >= 1)
+            var accountWithAccountID = this.accounts.Where(x => (x.GetAccountID() == inputAccountID)).FirstOrDefault();
+
+            if (accountWithAccountID != null)
             {
-                return accountWithAccountID[0];
+                return accountWithAccountID;
             }
             Console.WriteLine($"You have no accounts with ID {inputAccountID}. \n");
             return null;
         }
+
+
+        public void AccountOptions()
+        {
+            Account account = this.AccessAccount();
+            while (account != null)
+            {
+                Console.WriteLine("Please select an option below. \n");
+                Console.WriteLine("1. Display this account's balance.");
+                Console.WriteLine("2. Deposit.");
+                Console.WriteLine("3. Withdrawal.");
+                // Will impliment option 4 at a later date.
+                // Console.WriteLine("4. Transfer some funds to another account.");
+                Console.WriteLine("0. Go back.");
+
+                switch (hFunc.GetUserInt())
+                {
+                    case 0:
+                        Console.WriteLine("Going back...");
+                        return;
+
+                    case 1:
+                        account.DisplayBalance();
+                        break;
+
+                    case 2:
+                        account.Deposit();
+                        break;
+
+                    case 3:
+                        account.Withdrawal();
+                        break;
+
+                    //     // TODO: Think about how to make a client transfer funds into another account when the tranfser method is in the bank class.
+                    //     // wellsFargo.TransferFunds();
+                    // case 4:
+                    //     break;
+
+                    default:
+                        Console.WriteLine("Please select a valid option. \n");
+                        break;
+
+
+                }
+
+            }
+
+
+        }
+
+
+
+
+
+
     }
 }

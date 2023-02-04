@@ -42,11 +42,11 @@ namespace Models
 
             // I am wanting to grab the client that has the ID the user inputted. That client is then put into an ienumerable automattically. Then the ToList() method turns the ienumerable into a list
             // Once I have that container to be a list, that then gives me the ability to grab the client in the conditional.
-            var clientsWithClientID = this.clients.Where(x => (x.GetClientID().ToString().Equals(inputClientID))).ToList();
-            if ((clientsWithClientID.Count > 0) && (clientsWithClientID[0].GetClientPassword() == inputClientPassword))
+            var clientsWithClientID = this.clients.Where(x => (x.GetClientID().ToString().Equals(inputClientID))).FirstOrDefault();
+            if ((clientsWithClientID != null) && (clientsWithClientID.GetClientPassword() == inputClientPassword))
             {
-                Console.WriteLine($"Hello, {clientsWithClientID[0].GetClientFirstName()}! You logged in successfully! \n");
-                return clientsWithClientID[0];
+                Console.WriteLine($"Hello, {clientsWithClientID.GetClientFirstName()}! You logged in successfully! \n");
+                return clientsWithClientID;
             }
             Console.WriteLine("Incorrect client ID or password. \n");
             return null;
@@ -69,5 +69,40 @@ namespace Models
         //     Console.WriteLine($"There aren't enough funds in Account {accountFrom.GetAccountID()} for the transfer to be completed.");
         //     return false;
         // }
+
+        public void ClientOptions()
+        {
+            Client client = this.ClientLogIn();
+            while (client != null)
+            {
+                Console.WriteLine("Please select an option below. \n");
+                Console.WriteLine("1. List all account balances you have.");
+                Console.WriteLine("2. Create a new account.");
+                Console.WriteLine("3. Access an Existing account.");
+                Console.WriteLine("0. Log out. \n");
+
+                switch (hFunc.GetUserInt())
+                {
+                    case 0:
+                        return;
+
+                    case 1:
+                        client.DisplayAllBalances();
+                        break;
+
+                    case 2:
+                        client.CreateAccount();
+                        break;
+
+                    case 3:
+                        client.AccountOptions();
+                        break;
+
+                    default:
+                        Console.WriteLine("Please select a valid option.");
+                        break;
+                }
+            }
+        }
     }
 }
