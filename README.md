@@ -1,2 +1,2 @@
 # BankingApp
-This console application allow the user to create clients & accounts, make withdrawals, and deposits.
+This console application allows users to create accounts, make withdrawals, and deposits.
